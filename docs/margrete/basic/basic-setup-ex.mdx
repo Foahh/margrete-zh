@@ -1,0 +1,21 @@
+# 为谱面启用真金头
+
+![ex slide](/img/docs/note-exslide.png)
+
+- 在[谱面属性设定](docs/basic/basic-export#step1-谱面属性设定)中启用 **Join ExTAP to SLIDE or HOLD BEGIN** 来使用。
+
+- 在起点上叠加一个 ExTAP 来表示 ExSlide。
+
+- 如果上述设定未启用， TAP 和 ExTAP 就只会是单纯叠在一起而已。
+
+- 如果想在起点上添加 AIR，就需要另外叠加一个 ExTAP ，并在这个 ExTap 上添加 Air。
+
+- 也就是说，起点、ExTAP、带有 AIR 的 ExTAP 这**三个音符**会叠在一起。
+
+![exslide air](/img/docs/exslide-air.png)
+
+- **另外只要有一个 ExTAP 叠加，所有相同起点的判定都会变成 ExTAP 式的。**
+
+- 因此没有必要叠加多个 ExTap
+- _（图中有两个相同的起点和一个 ExTap 相互叠加）_
+  ![two exslide](/img/docs/exslide-example.png)

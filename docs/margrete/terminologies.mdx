@@ -1,0 +1,144 @@
+---
+sidebar_position: 0
+---
+
+import Image from "../../src/components/image";
+
+# 术语表
+
+## 事件
+
+- **变拍**、**变 BPM**、**变速**等统称为“事件”。
+
+## 音符
+
+### Tap
+
+- 最基本的音符。
+
+  <Image src="/img/docs/note-tap.png" alt="Tap" />
+
+### ExTAP
+
+- 必定获得最高判定 (JUSTICE CRITICAL) 的 **Tap** 音符。
+
+  <Image src="/img/docs/note-extap.png" alt="ExTAP" />
+
+### Flick
+
+- 需要快速滑动的音符。
+
+  <Image src="/img/docs/note-flick.png" alt="Flick" />
+
+- **仅在 Master 和 Ultima 难度下出现。**
+
+### Damage
+
+- 碰到后会产生 _MISS_ 判定的地雷音符。不碰触则会自动获得最高判定 (JUSTICE CRITICAL)。
+
+  <Image src="/img/docs/note-damage.png" alt="Damage" />
+
+- **仅在 WORLD'S END 难度下出现。**
+
+### Hold
+
+- 需要持续按住到终点的长音符。
+
+  <Image src="/img/docs/note-hold.png" alt="Hold" />
+
+### Slide
+
+- 按照轨迹滑动到终点的长音符。
+
+  <Image src="/img/docs/note-slide.png" alt="Slide" />
+
+- 不建议使用以下形状的 **Slide**：
+
+  <Image src="/img/docs/cases-slides.png" alt="Slide案例" />
+
+### Step (中继点)
+
+- 放置在 **Slide** 或 **Air-Slide** 之间的音符节点，可产生连击。
+
+  <Image src="/img/docs/step.png" alt="中继点示例" />
+
+### Control (控制点)
+
+- 用于改变长音符形状的节点，不会产生连击。
+
+- 控制点分为两种类型：
+
+  - **直线控制点**
+
+    用于创建平滑的直线形状。
+
+    <Image src="/img/docs/control-n.png" alt="直线控制点示例" />
+
+  - **曲线控制点** (仅适用于 **Slide**)
+
+    使用贝塞尔曲线创建弯曲形状。
+
+    详细操作请见 [插入 Slide 控制点或中继点](/docs/margrete/advanced/advanced-chart-edit?id=控制点)。
+
+    <Image src="/img/docs/control-b.png" alt="曲线控制点示例" />
+    <br />
+    <br />
+    :::warning 此项功能来自 [Ched](https://github.com/paralleltree/Ched)
+    谱面编辑器。贝塞尔曲线已被[弃用](https://peing.net/ja/q/3bb93a2f-b0a1-443b-b5af-ecf1f3f721ff)，建议熟练使用曲线生成功能。
+    :::
+
+### Air
+
+- 挥动手臂往上 **(Air-Up)** 或往下 **(Air-Down)** 的音符。
+
+  <Image src="/img/docs/note-air-up.png" alt="Air-Up" />
+
+- 可以附加在 **Tap**、**ExTap**、**Flick**、**Damage** 音符上，或放在 **Hold** 和 **Slide** 的终点上。
+
+### Air-Hold
+
+- 向上挥动手臂并保持到终点，在中继点上需要进行挥动动作的长音符。
+
+  <Image src="/img/docs/note-airhold.png" alt="Air-Hold" />
+
+- **Air-Hold** 可以没有终点音符。
+
+  <Image src="/img/docs/air-no-end.png" alt="没有终点的Air-Hold" />
+
+- **Air-Hold** 的起始高度可以更改。
+
+  <Image src="/img/docs/air-example1.png" alt="不同高度的Air-Hold" />
+
+### Air-Slide
+
+- 向上挥动手臂并按照轨迹滑动到终点，判定方式与 **Air-Hold** 相同的长音符。
+
+  <Image src="/img/docs/note-airslide.png" alt="Air-Slide" />
+
+- **Air-Slide** 可以没有终点音符。
+
+- **Air-Slide** 的起始高度可以更改。
+
+  <Image src="/img/docs/air-example2.png" alt="不同高度的Air-Slide" />
+
+### Air-Crush
+
+- 拥有一条引导线，需要在起点、中继点、终点快速挥动手臂的长音符。
+
+  <Image src="/img/docs/note-aircrush.png" alt="Air-Crush" />
+
+- 中间的线条仅为装饰，没有判定。
+
+- **Air-Crush** 可以没有终点音符。
+
+- 装饰线的颜色可以更改，更改方式请见 [改变音符的属性](docs/margrete/basic/basic-change-note-attr)。
+
+### Air-Trace
+
+- 仅为装饰线，没有任何判定的长音符。
+
+  <Image src="/img/docs/note-airtrace.png" alt="Air-Trace" />
+
+- 装饰线的颜色可以更改，更改方式请见 [改变音符的属性](docs/margrete/basic/basic-change-note-attr)。
+
+- 本质上是没有起点、终点以及控制点的 **Air-Crush**。

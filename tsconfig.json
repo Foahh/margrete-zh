@@ -2,5 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
   },
+  "mdx": {
+    "checkMdx": true
+  },
   "extends": "@docusaurus/tsconfig"
 }

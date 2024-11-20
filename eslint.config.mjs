@@ -8,7 +8,7 @@ import * as mdx from "eslint-plugin-mdx";
 export default [
   { ignores: ["**/node_modules/*", ".docusaurus/*"] },
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{ts,tsx,mdx}"],
   },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,

@@ -6,9 +6,9 @@ import * as mdx from "eslint-plugin-mdx";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { ignores: ["**/node_modules/*", ".docusaurus/*"] },
+  { ignores: ["**/node_modules/*", ".docusaurus/*", "build/*"] },
   {
-    files: ["**/*.{ts,tsx,mdx}"],
+    files: ["**/*.{ts,tsx,md,mdx}"],
   },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,

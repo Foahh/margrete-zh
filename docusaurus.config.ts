@@ -1,7 +1,9 @@
-import {themes as prismThemes} from "prism-react-renderer";
-import type {Config} from "@docusaurus/types";
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import searchLocal, { PluginOptions } from "@easyops-cn/docusaurus-search-local";
+import searchLocal, {
+  PluginOptions,
+} from "@easyops-cn/docusaurus-search-local";
 
 const config: Config = {
   title: "Margrete 中文",
@@ -49,6 +51,8 @@ const config: Config = {
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",
+          blogSidebarTitle: "博文",
+          blogSidebarCount: "ALL",
         },
         theme: {
           customCss: "./src/css/custom.css",

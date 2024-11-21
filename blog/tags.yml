@@ -1,4 +1,3 @@
-hello:
-  label: 主页
-  permalink: /main
-  description: 主页
+announcement:
+  label: 公告
+  description: 公告

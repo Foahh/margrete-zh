@@ -1,28 +1,34 @@
-# 改变音符的属性
+import Icon from "../../../src/components/icon";
+import Image from "../../../src/components/image";
 
-使用属性编辑功能，可以改变 ExTAP 的效果或有无 AIR-HOLD 的终点等。
+# 修改音符属性
 
-## 更改方法
+## 修改步骤
 
-1. 选择编辑工具栏的 ![属性編集](/img/docs/edit-toolbar-attr.png) ，切换到属性编辑模式。
+1. **切换到属性编辑模式**
+- 点击编辑工具栏中的 <Icon src="/img/docs/edit-toolbar-attr.png" alt="属性编辑" /> 图标。
 
-2. 在谱面编辑区域内，左键点击要改变属性的音符。
+2. **选择要修改的音符**
+- 在谱面编辑区域内，左键点击目标音符。
 
-3. 属性设置菜单会显示出来，可以勾选或取消勾选相应的选项。
+3. **设置属性**
+- 此时将会弹出属性设置菜单，请根据需要勾选或取消相关选项。
 
-![edit note attribute](/img/docs/edit-note-attr.png)
+    <Image src="/img/docs/edit-note-attr.png" alt="编辑音符属性"/>
 
-## 可以改变的音符和内容
+## 可修改的音符类型及其属性
 
-| 音符                 | 可以改变的内容            |
-| -------------------- | ------------------------- |
-| ExTAP                | ExTap 的击打背景特效      |
-| FLICK                | AutoPlay 时的击打方向特效 |
-| AIR                  | AIR 方向、颜色反转        |
-| AIR-HOLD 终点        | 音符的有无                |
-| AIR-SLIDE 终点       | 音符的有无                |
-| AIR-CRUSH 起点、终点 | 音符的有无                |
-| AIR-CRUSH 起点       | 装饰线的颜色              |
+| 音符类型               | 可修改内容                  |
+| ---------------------- | --------------------------- |
+| **ExTap**              | ExTap 的击打背景特效        |
+| **Flick**              | AutoPlay 模式下的击打方向特效 |
+| **Air**                | Air 的方向及颜色反转        |
+| **Air-Hold 终点**      | 是否存在该终点              |
+| **Air-Slide 终点**     | 是否存在该终点              |
+| **Air-Crush 起点/终点** | 是否存在起点及终点          |
+| **Air-Crush 起点**     | 装饰线的颜色                |
 
-> Tips: 可以在插入模式 ![笔](/img/docs/edit-toolbar-pen.png) 下**双击**音符来删除 AIR-HOLD 终点、AIR-SLIDE 终点、AIR-CRUSH
-> 起点 / 终点的音符
+:::tip
+在**插入模式** <Icon src="/img/docs/edit-toolbar-pen.png" alt="笔" /> 下，直接**双击**音符就可以删除 Air-Hold 终点、Air-Slide 终点以及 Air-Crush 的起点和终点。
+:::
+

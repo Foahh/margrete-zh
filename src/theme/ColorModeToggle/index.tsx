@@ -5,7 +5,7 @@ import type {WrapperProps} from '@docusaurus/types';
 
 type Props = WrapperProps<typeof ColorModeToggleType>;
 
-export default function ColorModeToggleWrapper(props: Props): JSX.Element {
+export default function ColorModeToggleWrapper(props: Props): React.ReactElement {
   return (
     <div style={{
       marginLeft: "0.5rem",

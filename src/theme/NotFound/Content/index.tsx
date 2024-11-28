@@ -3,7 +3,7 @@ import clsx from "clsx";
 import type { Props } from "@theme/NotFound/Content";
 import Heading from "@theme/Heading";
 
-export default function NotFoundContent({ className }: Props): JSX.Element {
+export default function NotFoundContent({ className }: Props): React.ReactElement {
   return (
     <main className={clsx("container margin-vert--xl", className)}>
       <div className="row">

@@ -49,7 +49,7 @@ export default function BlogAuthorSocials({
   author,
 }: {
   author: Props["author"];
-}): JSX.Element {
+}): React.ReactElement {
   const entries = Object.entries(author.socials ?? {});
   return (
     <div className={styles.authorSocials}>

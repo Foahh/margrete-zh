@@ -3,8 +3,9 @@ sidebar_position: 1
 ---
 
 import Icon from "../../../src/components/icon";
+import Image from "../../../src/components/image";
 
-# 编辑谱面的属性
+# 编辑谱面属性
 
 ## 说明
 
@@ -14,28 +15,68 @@ import Icon from "../../../src/components/icon";
 
 2. 选择 <Icon src="/img/docs/file-chart-prop.png" alt="Chart Property" /> **Chart Property**。
 
-3. 在弹出的窗口中填写所需内容，例如曲师、曲名、难度等。
+3. 在弹出的窗口中填写所需更改的项目。
 
 4. 点击 **OK** 以保存并关闭窗口。
 
-部分项目说明:
+<details>
+    <summary>项目说明</summary>
 
-![chart property](/img/docs/chart-prop.png)
+| **字段**                                      | **描述**                               | **说明**                                                                                                                                 |
+| --------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Song**                                      | **------**                             | **------**                                                                                                                               |
+| Song ID                                       | 用于辨识歌曲的 ID                      | 拥有相同 ID 的谱面文件会被 UMIGURI 视为同一首歌曲，通常无需更改                                                                          |
+| Title                                         | 歌曲标题                               |                                                                                                                                          |
+| Artist name                                   | 艺术家名称                             |                                                                                                                                          |
+| **Chart**                                     | **------**                             | **------**                                                                                                                               |
+| Designer                                      | 谱面设计者的名称                       |                                                                                                                                          |
+| Difficulty                                    | 谱面的难度类别                         |                                                                                                                                          |
+| Play level                                    | 谱面的难度等级                         | 在 World‘s END 中，等级通常等于星星的数量                                                                                                |
+| Chart constant                                | 谱面的难度定数                         |                                                                                                                                          |
+| Base timeline                                 | 基准时间线                             | 用于决定小节线位置和 AIR 动画速度的时间线 ID，默认值为 `0`（TIL 0）                                                                      |
+| Tutorial                                      | 是否为教程谱面                         | 若为教程谱面，某些 Note 的判定范围会有所改变                                                                                             |
+| Click SE                                      | 是否在开头播放提示音                   |                                                                                                                                          |
+| Insert a blank bar before the first measure   | 是否在第一个小节前插入空白             | 否则可以在播放提示音时直接放置 Note                                                                                                      |
+| Join ExTAP to SLIDE or HOLD BEGIN             | 是否将 ExTAP 链接至 SLIDE 或 HOLD 起点 | 通常称为“真金头”。启用后，在 SLIDE 或 HOLD 的起点放置 ExTAP 时，起点的判定范围会与 ExTAP 一致                                            |
+| Basic BPM                                     | 基准 BPM                               | 当歌曲存在变速时，基准 BPM 决定主要的 BPM，通常无需更改                                                                                  |
+| **BGM**                                       | **------**                             | **------**                                                                                                                               |
+| BGM filename                                  | BGM 的文件名                           | 可填写相对路径或绝对路径                                                                                                                 |
+| BGM playback offset                           | BGM 的播放延迟 _（单位：秒）_          | 正数表示延迟播放，负数表示提前播放                                                                                                       |
+| BGM preview range                             | BGM 的预览范围                         |                                                                                                                                          |
+| Wait until the end of BGM                     | 是否等待 BGM 播放结束后才进入结算      | 否则会在最后一个 Note 后直接进入结算界面                                                                                                 |
+| **Display**                                   | **------**                             | **------**                                                                                                                               |
+| Jacket image                                  | 封面文件名                             | 可填写相对路径或绝对路径                                                                                                                 |
+| Background image / video                      | 背景图片/视频文件名                    | 可填写相对路径或绝对路径                                                                                                                 |
+| Background 3D scene ID                        | 背景 3D 场景 ID                        |                                                                                                                                          |
+| Sync background video with BGM                | 是否将背景视频与 BGM 同步播放          | 通常与是否在开头播放提示音有关                                                                                                           |
+| Field background 3D scene ID                  | 轨道的 3D 背景 ID                      |                                                                                                                                          |
+| Field dividing line color                     | 轨道小节线的颜色                       |                                                                                                                                          |
+| **Copyright and License**                     | **------**                             | **------**                                                                                                                               |
+| Download URL                                  | 谱面的下载链接                         | 例如：[https://1drv.ms/f/s!AsfrN8H7Jx4TzyBl4Nh3jQtD9ado?e=XW2cin](https://1drv.ms/f/s!AsfrN8H7Jx4TzyBl4Nh3jQtD9ado?e=XW2cin)             |
+| Copyright                                     | 版权信息                               | 格式：`Copyright (C) 年份 作者名称`                                                                                                      |
+| License type                                  | 许可证类型                             | 例如：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。                                                |
+| URL of license agreement terms and conditions | 许可协议条款和条件的链接               | 例如：[https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。 |
 
-> 注意：修改 **Basic BPM** 并不会改变谱面 BPM，因此请注意要在开头[插入 BPM 更变事件](/docs/margrete/basic/basic-edit-chart)
+</details>
+
+:::tip[注意]
+修改 **`Basic BPM`** 并不会更变谱面的 BPM，请在开头[插入 BPM 更变事件](/docs/margrete/basic/basic-edit-chart)
+:::
 
 ## 设置音源
 
 1. 确保音源文件和谱面文件都在一个文件夹内
 
-2. 将音源名（带扩展名）填写到**BGM filename**里。
+2. 将音源位置（带扩展名）填写到 **`BGM filename`** 的栏目中。
 
-![音源位置](/img/docs/audio-example.png)
+<Image src="/img/docs/audio-example.png" alt="Audio Example" />
 
-> Tips: 推荐使用 wav 格式作为音源
+:::tip[快捷键]
+推荐使用 **`.wav`** 格式作为音源
+:::
 
-1. 在设置好音源和 BPM 后，你可以通过试听来检查音符的时间是否和音源一致。
+3.  在设置好音源和 BPM 后，你可以通过试听来检查音符的时间是否和音源一致。
 
-- 点击标准工具栏的 ![播放](/img/docs/std-toolbar-play.png) 或者按键盘的<kbd>Space</kbd> 键，就可以从光标（红线）的位置开始播放。再次进行同样的操作，就可以停止播放。
+        - 点击工具栏的 <Image src="/img/docs/std-toolbar-play.png" alt="Toolbar Play Button" /> 或者按键盘的 <kbd>Space</kbd> 键，就可以从光标（红线）的位置开始播放音源。
 
-- 当音源对不上的时候，可以填入音源延迟来调整（单位：秒）。
+        - 当音源对不上的时候，可以通过修改音源延迟来调整。

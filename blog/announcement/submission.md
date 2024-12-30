@@ -1,5 +1,5 @@
 ---
-title: 投稿
+title: 页面建设中
 authors: [foahh]
 tags: [announcement]
 ---
